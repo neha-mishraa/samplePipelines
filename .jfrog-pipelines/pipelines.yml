@@ -9,7 +9,7 @@
 #           onStart:
 #             - echo "hello"
 resources:
- - name: resource_pipelines1
+ - name: resource_pipelines_1
    type: GitRepo
    configuration:
      gitProvider: github_neha
@@ -18,11 +18,9 @@ resources:
        include: ^README.md$
      branches:
        include: ^{{gitBranch}}$
-#      buildOn:
-#        commit: true
 
 pipelines:
-  - name: pipe1
+  - name: testcustom
     steps:
       - name: myStep1
         type: Bash
@@ -33,11 +31,11 @@ pipelines:
            - name: github_neha
         execution:
           onExecute:
-            - pushd $res_resource_pipelines_resourcePath
+            - pushd $res_resource_pipelines_1_resourcePath
             - ls
             - echo "hi"
 
-  - name: testpipe2
+  - name: qwerty123
     steps:
       - name: myStep2
         type: Bash
@@ -47,7 +45,7 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
-  - name: nehatest
+  - name: neha23custom
     steps:
       - name: myStep3
         type: Bash
