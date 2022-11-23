@@ -9,7 +9,7 @@
 #           onStart:
 #             - echo "hello"
 resources:
- - name: resource_pipelines
+ - name: resource_pipelines1
    type: GitRepo
    configuration:
      gitProvider: github_neha
@@ -43,7 +43,7 @@ pipelines:
 #             - send_notification smtpNotification --recipients "nehamishraj01@gmail.com" --subject "Build Succeeded" --body "Message received"
 
 #           onSuccess:
-#             - pushd $res_resource_pipelines_resourcePath
+#             - pushd $res_resource_pipelines_resourcePath1
 #             - ls
 
   - name: testpipe2
