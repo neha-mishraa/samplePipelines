@@ -56,10 +56,10 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
-   - name: nehatest
-     steps:
-       - name: myStep3
-         type: Bash
-         execution:
-           onExecute:
-             - echo "hi"
+  - name: nehatest
+    steps:
+      - name: myStep3
+        type: Bash
+        execution:
+          onExecute:
+            - echo "hi"
