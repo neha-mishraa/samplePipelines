@@ -31,20 +31,11 @@ pipelines:
            - name: resource_pipelines
          integrations:
            - name: github_neha
-#            - name: slackTest
-#            - name: smtpNotification
         execution:
           onExecute:
-#             - printenv
             - pushd $res_resource_pipelines_resourcePath
             - ls
             - echo "hi"
-#             - send_notification slackTest --text "Pipeline test"
-#             - send_notification smtpNotification --recipients "nehamishraj01@gmail.com" --subject "Build Succeeded" --body "Message received"
-
-#           onSuccess:
-#             - pushd $res_resource_pipelines_resourcePath1
-#             - ls
 
   - name: testpipe2
     steps:
